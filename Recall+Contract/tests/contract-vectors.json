@@ -1,0 +1,12 @@
+{
+  "contractVersion": 1,
+  "limits": {
+    "deckName": {"min": 1, "max": 120}, "deckEmoji": {"max": 16},
+    "deckDescription": {"max": 500}, "cardFront": {"min": 1, "max": 4000},
+    "cardBack": {"min": 1, "max": 8000}, "displayName": {"min": 1, "max": 60},
+    "dailyGoal": {"min": 1, "max": 500}, "statsDays": {"min": 1, "max": 365}
+  },
+  "schedule": {"correctIntervalsDays": [1, 2, 4, 8, 16, 30], "incorrectDelayMinutes": 10},
+  "validation": [{"input": {"name": "x"}, "valid": true}, {"input": {"name": "x", "user_id": "forbidden"}, "valid": false, "code": "invalid_input"}],
+  "stats": {"accuracy": "correct_reviews / all_reviews", "mastery": "cards_with_correct_streak_at_least_3 / live_cards"}
+}
